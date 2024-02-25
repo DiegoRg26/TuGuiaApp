@@ -28,6 +28,8 @@ public class MenuInicio extends javax.swing.JFrame {
     public MenuInicio() {
         initComponents();
         this.setLocationRelativeTo(null);
+        String backtext = "<html><u>¿Olvidaste tu contraseña?</u></html>";
+        btmlosepass.setText(backtext);
         SetImageLabel(lblMinicio,"src/imagenes/logo.png");
         cx = new Conexion("usuarios");
         cx.Conectar();
@@ -59,6 +61,7 @@ public class MenuInicio extends javax.swing.JFrame {
         lblLogin = new javax.swing.JLabel();
         PanelBckbtmRegistrar = new javax.swing.JPanel();
         lblRegistro = new javax.swing.JLabel();
+        btmlosepass = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -122,6 +125,7 @@ public class MenuInicio extends javax.swing.JFrame {
         PanelBckBase.add(PanelBckbtmcerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 40));
 
         PanelBckder.setBackground(new java.awt.Color(255, 255, 255));
+        PanelBckder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
         txtUsuario.setForeground(new java.awt.Color(190, 193, 198));
@@ -137,6 +141,7 @@ public class MenuInicio extends javax.swing.JFrame {
                 txtUsuarioMousePressed(evt);
             }
         });
+        PanelBckder.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 252, 170, -1));
 
         txtPassword.setBackground(new java.awt.Color(255, 255, 255));
         txtPassword.setForeground(new java.awt.Color(190, 193, 198));
@@ -152,12 +157,18 @@ public class MenuInicio extends javax.swing.JFrame {
                 txtPasswordMousePressed(evt);
             }
         });
+        PanelBckder.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 304, 170, -1));
+        PanelBckder.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 274, 170, 10));
+        PanelBckder.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 326, 170, 10));
 
         lblimgUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-usuario-24.png"))); // NOI18N
+        PanelBckder.add(lblimgUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 244, -1, -1));
 
         lblpass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-desbloquear-24.png"))); // NOI18N
+        PanelBckder.add(lblpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 296, -1, -1));
 
         lblMinicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-cerca-40.png"))); // NOI18N
+        PanelBckder.add(lblMinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 65, 120, 120));
 
         btmestcx.setFont(new java.awt.Font("Consolas", 0, 10)); // NOI18N
         btmestcx.setForeground(new java.awt.Color(153, 153, 153));
@@ -168,6 +179,7 @@ public class MenuInicio extends javax.swing.JFrame {
                 btmestcxMouseClicked(evt);
             }
         });
+        PanelBckder.add(btmestcx, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 537, -1, -1));
 
         PanelBckbtmLogin.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -200,6 +212,8 @@ public class MenuInicio extends javax.swing.JFrame {
             PanelBckbtmLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
+
+        PanelBckder.add(PanelBckbtmLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 368, -1, -1));
 
         PanelBckbtmRegistrar.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -236,59 +250,12 @@ public class MenuInicio extends javax.swing.JFrame {
                 .addComponent(lblRegistro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout PanelBckderLayout = new javax.swing.GroupLayout(PanelBckder);
-        PanelBckder.setLayout(PanelBckderLayout);
-        PanelBckderLayout.setHorizontalGroup(
-            PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckderLayout.createSequentialGroup()
-                .addContainerGap(102, Short.MAX_VALUE)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBckderLayout.createSequentialGroup()
-                        .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelBckderLayout.createSequentialGroup()
-                                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblpass, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblimgUser, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(7, 7, 7)
-                                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(PanelBckderLayout.createSequentialGroup()
-                                .addComponent(PanelBckbtmLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(PanelBckbtmRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(90, 90, 90))
-                    .addComponent(btmestcx, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBckderLayout.createSequentialGroup()
-                        .addComponent(lblMinicio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(142, 142, 142))))
-        );
-        PanelBckderLayout.setVerticalGroup(
-            PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckderLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(lblMinicio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblimgUser))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblpass)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelBckbtmLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PanelBckbtmRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
-                .addComponent(btmestcx))
-        );
+        PanelBckder.add(PanelBckbtmRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 368, -1, -1));
+
+        btmlosepass.setForeground(new java.awt.Color(0, 153, 255));
+        btmlosepass.setText("¿Olvidaste tu contraseña?");
+        btmlosepass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PanelBckder.add(btmlosepass, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, -1, -1));
 
         PanelBckBase.add(PanelBckder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 550));
 
@@ -370,7 +337,7 @@ public class MenuInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPasswordMousePressed
 
     private void lblRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistroMouseClicked
-        RegistroUser RGU = new RegistroUser();
+        MenuTipoRegistro RGU = new MenuTipoRegistro();
         //this.setVisible(false);
         RGU.setVisible(true);
         this.dispose();
@@ -472,6 +439,7 @@ public class MenuInicio extends javax.swing.JFrame {
     private javax.swing.JLabel btmclose;
     private javax.swing.JLabel btmestcx;
     private javax.swing.JLabel btmext;
+    private javax.swing.JLabel btmlosepass;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblLogin;

@@ -7,7 +7,9 @@ package interfazes;
 import java.awt.Color;
 import clases.Rusuarios;
 import clases.SqlUsuarios;
-import javax.swing.JOptionPane;
+import java.awt.Image;
+import javax.swing.*;
+
 /**
  *
  * @author Diego EC Roman
@@ -21,6 +23,7 @@ public class RegistroUser extends javax.swing.JFrame {
     public RegistroUser() {
         initComponents();
         this.setLocationRelativeTo(null);
+        SetImageLabel(lblimglogo,"src/Imagenes/logo.png");
     }
 
     /**
@@ -36,10 +39,6 @@ public class RegistroUser extends javax.swing.JFrame {
         PanelBarraEstado = new javax.swing.JPanel();
         lblbtmcerrar = new javax.swing.JLabel();
         lblminimizar = new javax.swing.JLabel();
-        PanelBckizq = new javax.swing.JPanel();
-        lblimgregister = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         PanelBckder = new javax.swing.JPanel();
         txtUsuario = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -103,7 +102,7 @@ public class RegistroUser extends javax.swing.JFrame {
         PanelBarraEstadoLayout.setHorizontalGroup(
             PanelBarraEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBarraEstadoLayout.createSequentialGroup()
-                .addGap(0, 864, Short.MAX_VALUE)
+                .addGap(0, 324, Short.MAX_VALUE)
                 .addComponent(lblminimizar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblbtmcerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -116,47 +115,7 @@ public class RegistroUser extends javax.swing.JFrame {
             .addComponent(lblminimizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        PanelBase.add(PanelBarraEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 40));
-
-        PanelBckizq.setBackground(new java.awt.Color(21, 171, 146));
-
-        lblimgregister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-register-100.png"))); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("FORMULARIO DE REGISTRO");
-
-        jLabel2.setFont(new java.awt.Font("Consolas", 0, 10)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("V. 1.0");
-
-        javax.swing.GroupLayout PanelBckizqLayout = new javax.swing.GroupLayout(PanelBckizq);
-        PanelBckizq.setLayout(PanelBckizqLayout);
-        PanelBckizqLayout.setHorizontalGroup(
-            PanelBckizqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckizqLayout.createSequentialGroup()
-                .addGroup(PanelBckizqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelBckizqLayout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addComponent(lblimgregister))
-                    .addGroup(PanelBckizqLayout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel2))
-                .addContainerGap(111, Short.MAX_VALUE))
-        );
-        PanelBckizqLayout.setVerticalGroup(
-            PanelBckizqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckizqLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(lblimgregister)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
-                .addComponent(jLabel2))
-        );
-
-        PanelBase.add(PanelBckizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 550));
+        PanelBase.add(PanelBarraEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 40));
 
         PanelBckder.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -272,7 +231,7 @@ public class RegistroUser extends javax.swing.JFrame {
         lblbtmrcancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblbtmrcancelar.setForeground(new java.awt.Color(21, 171, 146));
         lblbtmrcancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblbtmrcancelar.setText("CANCELAR");
+        lblbtmrcancelar.setText("VOLVER");
         lblbtmrcancelar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(21, 171, 146), 2));
         lblbtmrcancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblbtmrcancelar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -388,13 +347,13 @@ public class RegistroUser extends javax.swing.JFrame {
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        PanelBase.add(PanelBckder, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 410, 550));
+        PanelBase.add(PanelBckder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelBase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PanelBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -476,9 +435,8 @@ public class RegistroUser extends javax.swing.JFrame {
     }//GEN-LAST:event_lblbtmregistrarMouseClicked
 
     private void lblbtmrcancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblbtmrcancelarMouseClicked
-        MenuInicio pni = new MenuInicio();
+        MenuTipoRegistro pni = new MenuTipoRegistro();
         pni.setVisible(true);
-        //this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_lblbtmrcancelarMouseClicked
 
@@ -606,7 +564,13 @@ public class RegistroUser extends javax.swing.JFrame {
         mn.setVisible(true);
         this.setVisible(false);
     }
-
+    
+    private void SetImageLabel(JLabel labelname, String root) {
+        ImageIcon image = new ImageIcon(root);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelname.getWidth(), labelname.getHeight(), Image.SCALE_DEFAULT));
+        labelname.setIcon(icon);
+        this.repaint();
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -614,10 +578,7 @@ public class RegistroUser extends javax.swing.JFrame {
     private javax.swing.JPanel PanelBase;
     private javax.swing.JPanel PanelBckRcancelar;
     private javax.swing.JPanel PanelBckder;
-    private javax.swing.JPanel PanelBckizq;
     private javax.swing.JPanel PanelBckregistrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -629,7 +590,6 @@ public class RegistroUser extends javax.swing.JFrame {
     private javax.swing.JLabel lblcpassword;
     private javax.swing.JLabel lblimglogo;
     private javax.swing.JLabel lblimgrcorreo;
-    private javax.swing.JLabel lblimgregister;
     private javax.swing.JLabel lblimgruser;
     private javax.swing.JLabel lblminimizar;
     private javax.swing.JLabel lblpassword;
