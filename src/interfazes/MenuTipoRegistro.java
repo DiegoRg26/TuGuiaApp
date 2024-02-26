@@ -17,13 +17,12 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
      * Creates new form MenuTipoRegistro
      */
     int xMouse, yMouse;
-
     public MenuTipoRegistro() {
         initComponents();
         this.setLocationRelativeTo(null);
         String backtext = "<html><u>Volver a inicio</u></html>";
         btmVolver.setText(backtext);
-        SetImageLabel(imglogo, "src/imagenes/logo.png");
+        SetImageLabel(imglogo, "src/imagenes/logo-120p.png");
     }
 
     /**
@@ -108,12 +107,15 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
         jPanel1.add(panelbckest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 40));
 
         panelbck.setBackground(new java.awt.Color(255, 255, 255));
+        panelbck.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imglogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-cerca-40.png"))); // NOI18N
+        panelbck.add(imglogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 55, 120, 120));
 
         lblmarca.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         lblmarca.setForeground(new java.awt.Color(153, 153, 153));
         lblmarca.setText("By TuGuiaAppTeam");
+        panelbck.add(lblmarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 536, -1, -1));
 
         btmVolver.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         btmVolver.setForeground(new java.awt.Color(0, 153, 255));
@@ -123,7 +125,14 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btmVolverMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btmVolverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btmVolverMouseExited(evt);
+            }
         });
+        panelbck.add(btmVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 450, -1, -1));
 
         PanelBckUser.setBackground(new java.awt.Color(255, 255, 255));
         PanelBckUser.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,6 +167,8 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
             .addComponent(btmUser, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
+        panelbck.add(PanelBckUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 288, -1, -1));
+
         PanelBckComer.setBackground(new java.awt.Color(255, 255, 255));
 
         btmComer.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -186,60 +197,18 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
             .addComponent(btmComer, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
+        panelbck.add(PanelBckComer, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 382, 197, -1));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Bienvenid@ al registro de TuGuiaApp");
+        panelbck.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 209, 261, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Por favor seleccionar el tipo de usuario que seras.");
-
-        javax.swing.GroupLayout panelbckLayout = new javax.swing.GroupLayout(panelbck);
-        panelbck.setLayout(panelbckLayout);
-        panelbckLayout.setHorizontalGroup(
-            panelbckLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelbckLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblmarca))
-            .addGroup(panelbckLayout.createSequentialGroup()
-                .addGroup(panelbckLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelbckLayout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(imglogo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelbckLayout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addGroup(panelbckLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(PanelBckComer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(PanelBckUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelbckLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(btmVolver))
-                    .addGroup(panelbckLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(panelbckLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        panelbckLayout.setVerticalGroup(
-            panelbckLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelbckLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(imglogo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(37, 37, 37)
-                .addComponent(PanelBckUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(PanelBckComer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btmVolver)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addComponent(lblmarca))
-        );
+        panelbck.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 235, -1, -1));
 
         jPanel1.add(panelbck, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 550));
 
@@ -317,6 +286,16 @@ public class MenuTipoRegistro extends javax.swing.JFrame {
         RU.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btmUserMouseClicked
+
+    private void btmVolverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmVolverMouseEntered
+        // TODO add your handling code here:
+        btmVolver.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_btmVolverMouseEntered
+
+    private void btmVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmVolverMouseExited
+        // TODO add your handling code here:
+        btmVolver.setForeground(new Color(0,153,255));
+    }//GEN-LAST:event_btmVolverMouseExited
 
     /**
      * @param args the command line arguments

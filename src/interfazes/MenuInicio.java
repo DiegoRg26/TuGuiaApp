@@ -28,9 +28,10 @@ public class MenuInicio extends javax.swing.JFrame {
     public MenuInicio() {
         initComponents();
         this.setLocationRelativeTo(null);
+        // La variable "backtext" es creada con la funcionde darle el aspecto subrayado al texto dentro del JLabel de olvidar contraseña
         String backtext = "<html><u>¿Olvidaste tu contraseña?</u></html>";
         btmlosepass.setText(backtext);
-        SetImageLabel(lblMinicio,"src/imagenes/logo.png");
+        SetImageLabel(lblMinicio,"src/imagenes/logo-120p.png");
         cx = new Conexion("usuarios");
         cx.Conectar();
     }
@@ -255,6 +256,14 @@ public class MenuInicio extends javax.swing.JFrame {
         btmlosepass.setForeground(new java.awt.Color(0, 153, 255));
         btmlosepass.setText("¿Olvidaste tu contraseña?");
         btmlosepass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btmlosepass.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btmlosepassMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btmlosepassMouseExited(evt);
+            }
+        });
         PanelBckder.add(btmlosepass, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, -1, -1));
 
         PanelBckBase.add(PanelBckder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 550));
@@ -338,7 +347,6 @@ public class MenuInicio extends javax.swing.JFrame {
 
     private void lblRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistroMouseClicked
         MenuTipoRegistro RGU = new MenuTipoRegistro();
-        //this.setVisible(false);
         RGU.setVisible(true);
         this.dispose();
         
@@ -382,6 +390,16 @@ public class MenuInicio extends javax.swing.JFrame {
     private void btmestcxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmestcxMouseClicked
         EstadoServidor.getInstancia();
     }//GEN-LAST:event_btmestcxMouseClicked
+
+    private void btmlosepassMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmlosepassMouseEntered
+        // TODO add your handling code here:
+        btmlosepass.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_btmlosepassMouseEntered
+
+    private void btmlosepassMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btmlosepassMouseExited
+        // TODO add your handling code here:
+        btmlosepass.setForeground(new Color(0,153,255));
+    }//GEN-LAST:event_btmlosepassMouseExited
 
     /**
      * @param args the command line arguments

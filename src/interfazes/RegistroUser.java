@@ -23,7 +23,7 @@ public class RegistroUser extends javax.swing.JFrame {
     public RegistroUser() {
         initComponents();
         this.setLocationRelativeTo(null);
-        SetImageLabel(lblimglogo,"src/Imagenes/logo.png");
+        SetImageLabel(lblimglogo,"src/Imagenes/logo-120p.png");
     }
 
     /**
@@ -118,6 +118,7 @@ public class RegistroUser extends javax.swing.JFrame {
         PanelBase.add(PanelBarraEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 40));
 
         PanelBckder.setBackground(new java.awt.Color(255, 255, 255));
+        PanelBckder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
         txtUsuario.setForeground(new java.awt.Color(190, 193, 198));
@@ -133,6 +134,9 @@ public class RegistroUser extends javax.swing.JFrame {
                 txtUsuarioActionPerformed(evt);
             }
         });
+        PanelBckder.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 206, 170, -1));
+        PanelBckder.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 228, 170, 10));
+        PanelBckder.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 170, 10));
 
         txtcorreo.setBackground(new java.awt.Color(255, 255, 255));
         txtcorreo.setForeground(new java.awt.Color(190, 193, 198));
@@ -143,6 +147,8 @@ public class RegistroUser extends javax.swing.JFrame {
                 txtcorreoMousePressed(evt);
             }
         });
+        PanelBckder.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 278, 170, -1));
+        PanelBckder.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 372, 170, 10));
 
         txtpassword.setBackground(new java.awt.Color(255, 255, 255));
         txtpassword.setForeground(new java.awt.Color(190, 193, 198));
@@ -153,6 +159,7 @@ public class RegistroUser extends javax.swing.JFrame {
                 txtpasswordMousePressed(evt);
             }
         });
+        PanelBckder.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 170, -1));
 
         txtcpassword.setBackground(new java.awt.Color(255, 255, 255));
         txtcpassword.setForeground(new java.awt.Color(190, 193, 198));
@@ -168,28 +175,39 @@ public class RegistroUser extends javax.swing.JFrame {
                 txtcpasswordActionPerformed(evt);
             }
         });
+        PanelBckder.add(txtcpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 422, 170, -1));
+        PanelBckder.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 444, 170, 10));
 
-        lblimglogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-accede-redondeado-derecho-100.png"))); // NOI18N
+        lblimglogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-cerca-40.png"))); // NOI18N
+        PanelBckder.add(lblimglogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 35, 120, 120));
 
         lblusuario.setForeground(new java.awt.Color(0, 0, 0));
         lblusuario.setText("Nombre de Usuario:");
+        PanelBckder.add(lblusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 176, -1, -1));
 
         lblcorreo.setForeground(new java.awt.Color(0, 0, 0));
         lblcorreo.setText("Correo electronico:");
+        PanelBckder.add(lblcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 248, -1, -1));
 
         lblpassword.setForeground(new java.awt.Color(0, 0, 0));
         lblpassword.setText("Contraseña:");
+        PanelBckder.add(lblpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, -1));
 
         lblcpassword.setForeground(new java.awt.Color(0, 0, 0));
         lblcpassword.setText("Confirmar Contraseña:");
+        PanelBckder.add(lblcpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 392, -1, -1));
 
         lblimgruser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-usuario-24.png"))); // NOI18N
+        PanelBckder.add(lblimgruser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 198, -1, -1));
 
         lblimgrcorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-correo-24.png"))); // NOI18N
+        PanelBckder.add(lblimgrcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
         lblrpassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-desbloquear-24.png"))); // NOI18N
+        PanelBckder.add(lblrpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 342, -1, -1));
 
         lblrcpassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-desbloquear-24.png"))); // NOI18N
+        PanelBckder.add(lblrcpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 414, -1, -1));
 
         PanelBckregistrar.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -226,6 +244,8 @@ public class RegistroUser extends javax.swing.JFrame {
                 .addComponent(lblbtmregistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
         );
 
+        PanelBckder.add(PanelBckregistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 472, -1, -1));
+
         PanelBckRcancelar.setBackground(new java.awt.Color(255, 255, 255));
 
         lblbtmrcancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -261,91 +281,7 @@ public class RegistroUser extends javax.swing.JFrame {
                 .addComponent(lblbtmrcancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout PanelBckderLayout = new javax.swing.GroupLayout(PanelBckder);
-        PanelBckder.setLayout(PanelBckderLayout);
-        PanelBckderLayout.setHorizontalGroup(
-            PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckderLayout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBckderLayout.createSequentialGroup()
-                        .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblimgruser, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblimgrcorreo, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblrpassword, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblrcpassword, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblcpassword)
-                            .addComponent(lblpassword)
-                            .addComponent(lblcorreo)
-                            .addComponent(lblusuario)
-                            .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jSeparator4)
-                                .addComponent(txtcpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jSeparator3)
-                                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtcorreo)
-                                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtUsuario)
-                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(120, 120, 120))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBckderLayout.createSequentialGroup()
-                        .addComponent(PanelBckregistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(PanelBckRcancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBckderLayout.createSequentialGroup()
-                        .addComponent(lblimglogo)
-                        .addGap(152, 152, 152))))
-        );
-        PanelBckderLayout.setVerticalGroup(
-            PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBckderLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(lblimglogo)
-                .addGap(18, 18, 18)
-                .addComponent(lblusuario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblimgruser))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lblcorreo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblimgrcorreo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lblpassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblrpassword))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lblcpassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtcpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblrcpassword))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(PanelBckderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PanelBckRcancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelBckregistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
+        PanelBckder.add(PanelBckRcancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 472, -1, -1));
 
         PanelBase.add(PanelBckder, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 550));
 
